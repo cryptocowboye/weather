@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #82f7fb;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+form p {
+    margin: 20px 10px;
+}
+
+label[for="location-input"] {
+    font-size: 1.4em;
+    padding: 10px;
+}
+
+#location-input {
+    width: 250px;
+    border-radius: 15px;
+    border: none;
+}
+
+#location-input:focus {
+    outline: none;
+}
+
+#location-input, .location-form-button {
+    padding: 10px;
+}
