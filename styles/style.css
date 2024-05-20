@@ -3,11 +3,68 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font-family: "Libre Baskerville", sans-serif;
+}
+
 header {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #82f7fb;
+    height: 75px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.weather-container {
+    height: 600px;
+    width: 500px;
+    border-radius: 15px;
+    background-color: #8080800f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgb(55 43 43 / 7%) 0px -23px 25px 0px inset, 
+    rgb(0 0 0 / 8%) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.weather-temp {
+    font-size: 6rem;
+}
+
+.weather-city {
+    font-size: 4rem;
+}
+
+.weather-region {
+    font-size: xx-large;
+}
+
+.weather-country {
+    font-size: 1.4rem;
+}
+
+.weather-condition {
+    font-size: 50px;
 }
 
 form {
@@ -38,4 +95,17 @@ label[for="location-input"] {
 
 #location-input, .location-form-button {
     padding: 10px;
+}
+
+.location-form-button {
+    border: none;
+    border-radius: 15px;
+    background-color: orange;
+}
+
+.location-form-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
 }
