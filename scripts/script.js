@@ -28,15 +28,31 @@ function unpackData (input) {
     obj.then((data) => {
         console.log(data)
         weather = createDataObj(data)
-        console.log(weather.temperature)
-        console.log(weather.name, weather.region, weather.country, weather.condition);
+        updateWeatherElements(weather);
     })
 
     return weather
 }
 
+function updateWeatherElements (weatherObj) {
+    const weatherTemp = document.querySelector(".weather-temp");
+    const weatherName = document.querySelector(".weather-city");
+    const weatherRegion = document.querySelector(".weather-region");
+    const weatherCountry = document.querySelector(".weather-country");
+    const weatherCondition = document.querySelector(".weather-condition");
+
+    weatherTemp.textContent = `${weatherObj.temperature}°`;
+    weatherName.textContent = weatherObj.name;
+    weatherRegion.textContent = weatherObj.region;
+    weatherCountry.textContent = weatherObj.country;
+    weatherCondition.textContent = weatherObj.condition
+
+    return;
+}
+
 const area = document.querySelector("#location-input");
 const areaForm = document.querySelector("form");
+const main = document.querySelector("main");
 
 areaForm.addEventListener("submit", (e) => {
     unpackData(area.value);
